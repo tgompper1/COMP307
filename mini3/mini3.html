@@ -1,0 +1,165 @@
+<!-- Tess Gompper #2600947251 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        </script>
+        <style>
+            .headerDiv {
+                height: 75px;
+            }
+            .focalDiv {
+                height: 250px;
+                background-color: #242e69;
+                padding: 25px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                /* display: flex; */
+                flex-direction: row; 
+                flex-wrap: wrap;
+            }
+            .bottomDiv {
+                height: 300px;
+            }
+            h1 {
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 45px;
+            }
+            .p1 {
+                /* width: 100px; */
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+            }
+            button {
+                background-color: #216324;
+                color: white;
+                border: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            .bold {
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+            a {
+                font-family: sans-serif;
+            }
+            .button-link{
+                color:white;
+                text-decoration: none;
+            }
+            a:link{
+                color: black;
+                text-decoration: none;
+            }
+            a:visited{
+                color: black;
+                text-decoration: none;
+            }
+            p {
+                font-family: sans-serif;
+                font-size: small;
+            }
+            h3 {
+                font-family: sans-serif;
+            }
+            .pink-mode {
+                background-color: #a1405f;
+            }
+        </style>
+        <script>
+            function pinkMode(){
+                var element = document.getElementById("focalDiv");
+                var pic1 = document.getElementById("cat_1").src;
+                var pic2 = document.getElementById("cat_2").src;
+                var pic3 = document.getElementById("cat_3").src;
+
+                element.classList.toggle("pink-mode");
+
+                if(pic1.indexOf("cat1.png")!= -1){
+                    document.getElementById("cat_1").src = "./cat1_pink.png";
+                }
+                else{
+                    document.getElementById("cat_1").src = "./cat1.png";
+                }
+                if(pic2.indexOf("cat2.png")!= -1){
+                    document.getElementById("cat_2").src = "./cat2_pink.png";
+                }
+                else{
+                    document.getElementById("cat_2").src = "./cat2.png";
+                }
+                if(pic3.indexOf("cat3.png")!= -1){
+                    document.getElementById("cat_3").src = "./cat3_pink.png";
+                }
+                else{
+                    document.getElementById("cat_3").src = "./cat3.png";
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <div style="width: 1200px; border-style: solid; border-width: thick;" >
+            <div class="headerDiv">
+                <div>
+                    <img src="./tess-logo.png"  width="90" height="75" alt="Tess Logo"></img>
+                    <div style="position: absolute; top: 37px; left: 250px;">
+                        <a class="bold" target="_blank" href="https://media.istockphoto.com/id/1190489967/photo/cat-notebook-computer.webp?b=1&s=170667a&w=0&k=20&c=rdVc5xjG6m8aA7PJEh0_albQ9Ddj9VtCTIbuNN75lA8=">Platform</a> &nbsp; 
+                        <a class="bold" target="_blank" href="https://pagefly.io/cdn/shop/articles/cat_business.jpg?v=1686792682">Plans</a> &nbsp;
+                        <a class="bold" target="_blank" href="https://gratisography.com/wp-content/uploads/2018/05/gratisography-326H-free-stock-photo.jpg">Enterprise</a> &nbsp;
+                        <a class="bold" target="_blank" href="https://media.istockphoto.com/id/1321675346/photo/funny-bengal-cat-in-glasses-reading-a-book-education-concept.jpg?s=612x612&w=0&k=20&c=PZ-sOKGzdI9xLcG9EZMHTwrd6fgGfh9JRvts1skT8CI=">Resources</a> &nbsp;
+                        <a class="bold" target="_blank" href="https://assets3.thrillist.com/v1/image/2743933/792x528/scale;webp=auto;jpeg_quality=60.jpg">Education</a> &nbsp;
+                    </div>
+                    <div style="position: absolute; top: 30px; left: 925px;">
+                        <a target="_blank" href="https://media.istockphoto.com/id/524549554/photo/cat-is-talking-over-the-old-phone.jpg?s=612x612&w=0&k=20&c=DpD-LSDm3YW1T7ge54IhLVn2XWjoLasJvGTxjnLYyHk=">Contact Us</a> &nbsp;
+                        <a target="_blank" href="https://i.insider.com/55a67a7a371d22ce178b6624?width=1200&format=jpeg">Log In</a> &nbsp;
+                        <button type="button" onclick="pinkMode()">Change Color</button>
+                    </div>
+                </div>
+                <!-- <div>
+                    <a>Platform</a> &nbsp; 
+                    <a>Plans</a> &nbsp;
+                    <a>Enterprise</a> &nbsp;
+                    <a>Resources</a> &nbsp;
+                    <a>Education</a> &nbsp;
+                </div> -->
+
+            </div>
+            <div class="focalDiv" id="focalDiv">
+                
+                    <h1>See value from social sooner</h1>
+                    <div style="width:350px; display: inline-block; margin: 0 auto;">
+                        <p class = "p1">
+                            Our training and strategic services have helped
+                            thousands of organizations succeed on social.
+                        </p>
+                    
+                    <div><a class="button-link", target="_blank" href="https://www.youtube.com/live/pSshZEMP3a4?si=Y7JgMqlwcgadbJPB"><button type="button">Request a Demo</button></a></div>
+                </div>
+            </div>
+            <div class="bottomDiv">
+                <div style="position: absolute; bottom: 125px; left: 160px; text-align: center;">
+                    <img src="./cat1.png"  width="90" height="75" alt="cat 1" id="cat_1"></img>
+                    <h3>2,500</h3>
+                    <p>enterprise organizations successfully launched</p>
+                </div>
+                <div style="position: absolute; bottom: 125px; left: 500px; text-align: center;">
+                    <img src="./cat2.png"  width="90" height="75" alt="cat 2" id="cat_2"></img>
+                    <h3>45,000</h3>
+                    <p>enterprise users onboarded seamlessly</p>
+                </div>
+                <div style="position: absolute; bottom: 125px; left: 800px; text-align: center;">
+                    <img src="./cat3.png"  width="90" height="75" alt="cat 3" id="cat_3"></img>
+                    <h3>200,000+</h3>
+                    <p>professionals trained on product and strategy</p>
+                </div>
+            </div>
+       </div> 
+    </body>
+</html>
