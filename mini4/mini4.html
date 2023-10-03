@@ -1,0 +1,149 @@
+<!-- Tess Gompper #260947251 -->
+<!DOCTYPE html>
+<html>        
+    <head>
+        <script>
+            function formValidation(){
+                let c = check();
+                if(c){
+                    resetCheck();
+                }
+            }
+
+            function emailCheck(){
+                let e = document.querySelector('input[name="email"]');
+                if(!e.value?.includes('@')){
+                    alert("Your email is missing an '@'");
+                    return false;
+                }
+                return true;
+            }
+
+            function check(){
+                let r = false;
+                let fname = document.querySelector('input[name="first"]');
+                let lname = document.querySelector('input[name="last"]');
+                let email = document.querySelector('input[name="email"]');
+                let phone = document.querySelector('input[name="phone"]');
+                let os = document.querySelectorAll('input[name="OS"]');
+                book_sel = document.querySelector('#book-select');
+
+                // get book drop-down menu selection
+                book_output = book_sel.value;
+                
+                // check radio buttons
+                let selected = 0;
+                for(const b of os){
+                    if(b.checked){
+                        selected = 1;
+                        break;
+                    }
+                }
+
+                if(fname.value?.length== 0 || lname.value?.length== 0 || email.value?.length== 0 || phone.value?.length== 0  || !selected || book_output==""){
+                    alert("One or more fields are empty");
+                    if(fname.value?.length== 0){
+                        let text = document.getElementById("fname");
+                        text.classList.add('missing-input');
+                    }
+                    if(lname.value?.length== 0){
+                        let text = document.getElementById("lname");
+                        text.classList.add('missing-input');
+                    }
+                    if(email.value?.length== 0){
+                        let text = document.getElementById("email");
+                        text.classList.add('missing-input');
+                    }
+                    else{
+                        emailCheck();
+                    }
+                    if(phone.value?.length== 0){
+                        let text = document.getElementById("phone");
+                        text.classList.add('missing-input');
+                    }
+                    if(selected == 0){
+                        let text = document.getElementById("os");
+                        text.classList.add('missing-input');
+                    }
+                    if(book_output == ""){
+                        let text = document.getElementById("book");
+                        text.classList.add('missing-input');
+                    }
+                    return false;
+                }
+                return emailCheck();
+            }
+
+            function resetCheck(){
+                let first = document.getElementById("fname");
+                let last = document.getElementById("lname");
+                let email = document.getElementById("email");
+                let phone = document.getElementById("phone");
+                let books = document.getElementById("book");
+                let os = document.getElementById("os");
+
+                first.classList.remove('missing-input');
+                last.classList.remove('missing-input');
+                email.classList.remove('missing-input');
+                phone.classList.remove('missing-input');
+                books.classList.remove('missing-input');
+                os.classList.remove('missing-input');
+            }
+        </script>
+
+        <style>
+            .missing-input {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>  
+        <form name="input" action="mini4.py" method="post" novalidate>
+            <h1>Registration Form</h1>
+
+            Please fill in all fields and clock Register
+
+            <h2>User Information</h2>
+
+            <div style="display:flex;">
+                <div style="margin-right: 10px;">
+                    <div id="fname">First name:</div></br>
+                    <div id="lname">Last name: </div></br>
+                    <div id="email">Email: </div></br>
+                    <div id="phone">Phone: </div></br>
+                </div>
+                <div>
+                    <div><input type="text" name="first"></div></br>
+                    <div><input type="text" name="last"></div></br>
+                    <div><input type="text" name="email"></div></br>
+                    <div><input type="tel" name="phone" placeholder="(111)111-1111"></div></br>
+                </div>
+            </div>
+
+            <h2>Publications</h2>
+            <div id="book">Which book would you like information about? </div></br>
+
+            <select name="books" id="book-select">
+                <option value="">Select an Option</option>
+                <option value="maame">Maame</option>
+                <option value="vacationers">The Vacationers</option>
+                <option value="beans">The Bean Trees</option>
+                <option value="murder">The Thursday Murder Club</option>
+                <option value="word">There's a Word For That</option>
+            </select>
+
+            <h2>Operating Systems</h2>
+            <div id="os">Which operating systems do you use?</div>
+
+            <input type="radio" name="OS" value="windows"> Windows
+            <input type="radio" name="OS" value="max"> Mac OS X
+            <input type="radio" name="OS" value="linux"> Linux
+            <input type="radio" name="OS" value="other"> Other
+            
+            <br></br>
+            
+            <button type="button" onclick="formValidation()">Register</button> 
+        </form>  
+    </body>
+</html>
