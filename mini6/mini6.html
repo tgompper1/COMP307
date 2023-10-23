@@ -1,0 +1,53 @@
+<!-- Tess Gompper #260947251 -->
+<!DOCTYPE html>
+<html>        
+    <head></head>
+    <body>  
+        <form name="input" action="mini6.php" method="post" novalidate>
+            <h1>Registration Form</h1>
+
+            Please fill in all fields and clock Register
+
+            <h2>User Information</h2>
+
+            <div style="display:flex;">
+                <div style="margin-right: 10px;">
+                    <div id="fname">First name:</div></br>
+                    <div id="lname">Last name: </div></br>
+                    <div id="email">Email: </div></br>
+                    <div id="phone">Phone: </div></br>
+                </div>
+                <div>
+                    <div><input type="text" name="first"></div></br>
+                    <div><input type="text" name="last"></div></br>
+                    <div><input type="text" name="email"></div></br>
+                    <div><input type="tel" name="phone" placeholder="(111)111-1111"></div></br>
+                </div>
+            </div>
+
+            <h2>Publications</h2>
+            <div id="book">Which book would you like information about? </div></br>
+
+            <select name="books" id="book-select">
+                <option value="">Select an Option</option>
+                <option value="Maame">Maame</option>
+                <option value="The Vacationers">The Vacationers</option>
+                <option value="The Bean Trees">The Bean Trees</option>
+                <option value="The Thursday Murder Club">The Thursday Murder Club</option>
+                <option value="There's a Word For That">There's a Word For That</option>
+            </select>
+
+            <h2>Operating Systems</h2>
+            <div id="os">Which operating systems do you use?</div>
+
+            <input type="radio" name="OS" value="Windows"> Windows
+            <input type="radio" name="OS" value="Mac OS X"> Mac OS X
+            <input type="radio" name="OS" value="Linux"> Linux
+            <input type="radio" name="OS" value="other"> Other
+            
+            <br></br>
+            
+            <button type="submit">Register</button> 
+        </form>  
+    </body>
+</html>
